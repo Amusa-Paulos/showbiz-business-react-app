@@ -3,6 +3,7 @@ import { Col, Container, Button, Card, CardBody, CardImg,
     CardSubtitle, CardText, CardTitle, Row } from 'reactstrap'
 import { FaPlay } from 'react-icons/fa';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import ReactStars from "react-rating-stars-component";
 
 
 const CardContainerMaker = ({image, title, maker, star}) => {
@@ -12,7 +13,7 @@ const CardContainerMaker = ({image, title, maker, star}) => {
             <CardImg alt="music" src={image} top
                 width="100%" style={{overflow: 'hidden'}} />
             </div>
-            <CardBody>
+            <CardBody className="pb-3">
                 <CardTitle tag="h5" className="mt-5">
                     {title}
                 </CardTitle>
@@ -20,7 +21,14 @@ const CardContainerMaker = ({image, title, maker, star}) => {
                     {maker}
                 </CardSubtitle>
                 <CardText className="my-4">
-                    {star}
+                    <ReactStars
+                        count={5}
+                        onChange={() => null}
+                        size={24}
+                        activeColor="#117cb9"
+                        value={star}
+                        edit={false}
+                    />
                     
                 </CardText>
             </CardBody>
@@ -69,7 +77,7 @@ export default function Movies() {
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/loki.jpg').default}
                                 title="Loki" maker="Marvel Studios" 
-                                star={4} />
+                                star={3} />
                         </SwiperSlide>
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/captain-marvel.jpg').default}
@@ -79,7 +87,7 @@ export default function Movies() {
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/ladyloki1.jpg').default}
                                 title="Lady Loki" maker="Marvel Studios" 
-                                star={4} />
+                                star={3} />
                         </SwiperSlide>
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/avengers-infinity-war.jpg').default}
@@ -136,7 +144,7 @@ export default function Movies() {
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/loki.jpg').default}
                                 title="Loki" maker="Marvel Studios" 
-                                star={4} />
+                                star={2} />
                         </SwiperSlide>
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/captain-marvel.jpg').default}
@@ -146,7 +154,7 @@ export default function Movies() {
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/ladyloki1.jpg').default}
                                 title="Lady Loki" maker="Marvel Studios" 
-                                star={4} />
+                                star={5} />
                         </SwiperSlide>
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/avengers-infinity-war.jpg').default}
@@ -213,7 +221,7 @@ export default function Movies() {
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/ladyloki1.jpg').default}
                                 title="Lady Loki" maker="Marvel Studios" 
-                                star={4} />
+                                star={5} />
                         </SwiperSlide>
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/avengers-infinity-war.jpg').default}
@@ -223,7 +231,7 @@ export default function Movies() {
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/The-Infinity-Saga.jpg').default}
                                 title="Lady Loki" maker="Marvel Studios" 
-                                star={4} />
+                                star={3} />
                         </SwiperSlide>
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/captain-marvel.jpg').default}
@@ -280,12 +288,12 @@ export default function Movies() {
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/ladyloki1.jpg').default}
                                 title="Lady Loki" maker="Marvel Studios" 
-                                star={4} />
+                                star={2} />
                         </SwiperSlide>
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/avengers-infinity-war.jpg').default}
                                 title="Lady Loki" maker="Marvel Studios" 
-                                star={4} />
+                                star={3} />
                         </SwiperSlide>
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/The-Infinity-Saga.jpg').default}
@@ -300,7 +308,7 @@ export default function Movies() {
                         <SwiperSlide className="text-white movies-swiper-slide">
                             <CardContainerMaker image={require('../../media/movies/avengers-infinity-war.jpg').default}
                                 title="Lady Loki" maker="Marvel Studios" 
-                                star={4} />
+                                star={5} />
                         </SwiperSlide>
                     </Swiper>
                 </Col>

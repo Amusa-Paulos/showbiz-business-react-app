@@ -37,7 +37,7 @@
 }
 
 .swiper-container{
-    height: 450px;
+    min-height: 450px;
 }
 .movies-swiper-slide{
     display: flex;
@@ -97,5 +97,6 @@
     box-shadow: 0 8px 32px 0 rgba(112, 112, 126, 0.37);
     z-index: +2;
     border-radius: 10px;
+    
 }
 
